@@ -1,4 +1,6 @@
 #! /bin/bash
+# (#!) 这里是用 /bin/sh 做解释器
+
 echo "Hello World !" 
 
 
@@ -44,7 +46,10 @@ done
 # -死记一点，单引号内就是正则表达式的用法
 echo ----------------------------------grep强大的文本检索
 
-# 在package.json文件中找到匹配条件的。-n 为显示行号。
+# 在package.json文件中找到匹配条件的。
+# -n 为显示行号。
+# -E 满足多个条件： grep -E 'word1|word2'
+# -v 显示不包含匹配文本的所有行
 echo ----所有的min
 grep -n 'min' package.json  # 
 echo "asdminsadasdasds" | grep 'min'
@@ -53,24 +58,24 @@ echo ---- 包含 gulp galp
 grep 'g[ua]lp'   package.json  #
 
 echo ---- 非gulp的 g.lp
-grep  'g[^u]lp'  package.json  # 
+grep  'g[^u]lp'  package.json    # 
 
 echo ---- 必须^hol开头, 前面有空格也不行
-grep  '^hol'    package.json  # 
+grep  '^hol'    package.json     # 
 
 echo ---- 必须^gram\",\$结尾
 grep  'gram",$'    package.json  # 
 
 echo ---- 四个字符 g..p
-grep    'g..p'   package.json  #
+grep    'g..p'   package.json    #
 
 echo ---- 任意多个字符cl cll clll
-grep    'cl*l'    package.json  # 
+grep    'cl*l'    package.json   # 
 
 echo ---- 找到gpp,gppp,注意{}在 shell中有特殊含义，故需要转义.
 grep   'gp\{2,3\}'    package.json 
 
-echo ----------------------------------sed ⚠️不知道这里进行操作后为什么,没有换行
+echo ----------------------------------sed ⚠️ 不知道这里进行操作后为什么,没有换行
 # Mac 自带的时 BSD 版本的 sed，因为功能较弱，我不推荐使用，建议使用 gsed，如无特殊说明，下文的介绍都是针对 gsed的。
 # brew install coreutils
 # which gsed
@@ -109,13 +114,16 @@ echo ----------------------------------awk 以字段为单位进行处理\(其�
 #  5.NR   目前处理的是第几行的数据
 #  6.FS   目前的分隔字符
 
+CP_sourceDIR='/Users/admin/Desktop/web项目/1-NPM/sh' 
+awk  '{print   $1  "\t"  $2 "\t" $3 "\t" $4 "\t" $5 }'   /Users/admin/Desktop/web项目/1-NPM/sh 
+
 echo ----  前五行的 第一行，第二行，第三行
-awk  'NR<6{print   $1  "\t"  $2 "\t" $3 }'     sed.txt  
+awk  'NR<6{print   $1  "\t"  $2 "\t" $3 "\t" $4 "\t" $5 }'     sed.txt  
 
 awk '{print "该行数据为" $0 "\t" "该行的字段总数为"  NF   "\t"  "目前这是第几行"  NR}'   sed.txt 
 
 echo ---- 把passwd文件中的第一列，第三列打印出来（条件：第三列数字 \< 10）
-awk  'BEGIN{FS=":", print "begin print"}  $3<10{print $1 "\t" $3}'    /etc/passwd 
+awk  'BEGIN{FS=":"}  $3<10{print $1 "\t" $3}'    /etc/passwd 
 
 
 bsfilename
