@@ -1,6 +1,7 @@
 # shell-
 shell脚本
 
+```
 .
 |____ABuild.sh   #xcodebuild打包脚本
 |____Automator 
@@ -19,5 +20,6 @@ shell脚本
 |____文件夹2
 | |____floder
 | | |____new
+```
 
 [我的简书链接](https://www.jianshu.com/p/d3cd860f01c4)
