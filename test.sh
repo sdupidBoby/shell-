@@ -1,6 +1,8 @@
 #! /bin/bash
 # (#!) 这里是用 /bin/sh 做解释器
 
+⚠️⚠️⚠️⚠  这是shell的学习笔记 ⚠️⚠️⚠️
+
 echo "Hello World !" 
 
 
