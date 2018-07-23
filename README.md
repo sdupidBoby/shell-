@@ -6,6 +6,7 @@ shell脚本
 |____ABuild.sh   #xcodebuild打包脚本
 |____Automator 
 | |____archive_demo.workflow   #Automator导出来的Workflow
+|____README.md
 |____copy.sh    
 |____iOSArchivefile  
 | |____ExportOptions.plist     #打包需要的配置文件
@@ -20,6 +21,11 @@ shell脚本
 |____文件夹2
 | |____floder
 | | |____new
+|____更改键盘映射    # remapping key
+| |____com.yuans.remapkeys.plist
+| |____remappingKey.sh
+
+
 ```
 
 [我的简书链接](https://www.jianshu.com/p/d3cd860f01c4)
