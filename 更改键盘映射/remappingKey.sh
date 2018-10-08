@@ -13,9 +13,15 @@
 # hidutil property --get "UserKeyMapping"
 
 # launchctl load 启动plist运行
-# launchctl list 查看
+# launchctl unload  卸载
+# launchctl list 查看所有启动任务
 # launchctl start 开始plist任务
-# <!-- launchctl load /Users/admin/Library/LaunchAgents/yuans.remap_keys.plist -->
+# launchctl error code 查看code对应的错误解释
+
+# launchctl unload /Users/admin/Library/LaunchAgents/com.yuans.remapkeys.plist 
+# launchctl load /Users/admin/Library/LaunchAgents/com.yuans.remapkeys.plist 
+# launchctl list
+
 
 FROM="\"HIDKeyboardModifierMappingSrc\""
 TO="\"HIDKeyboardModifierMappingDst\""

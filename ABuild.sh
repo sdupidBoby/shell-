@@ -1,3 +1,5 @@
+# ⚠️⚠️⚠️⚠ 这是一个iOS自动打包+上传的shell ⚠️⚠️⚠️
+
 BuildConfiguration=Release # 打包Release or Debug
 SCHEMENAME=demo      # 项目scheme名
 SOURCEPATH=$PWD    # 项目路径

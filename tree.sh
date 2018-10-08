@@ -1,8 +1,8 @@
 # !/bin/bash
  
-
 # 转译符号:  \
 
+# ⚠️⚠️⚠️⚠ 这是自己实现的一个tree显示文件目录结构的shell ⚠️⚠️⚠️
 
 file=/dir1/dir2/dir3/my.file.txt
 # #是去掉左边（键盘上#在 $ 的左边）(从最左边开始)
@@ -12,8 +12,9 @@ file=/dir1/dir2/dir3/my.file.txt
 # ${file:5:5}：提取第5 个字节右边的连续5个字节：/dir2
 
 echo "去掉最左边/前面,输出："${file##*/} #get the dir name, remove the path    输出：sh
+echo "shell\($0)目录结构:"
 
-current_path=`pwd`
+current_path=$1  # 在这里修改 路径
 
 output_dir()
 {
