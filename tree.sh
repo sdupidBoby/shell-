@@ -3,6 +3,7 @@
 # 转译符号:  \
 
 # ⚠️⚠️⚠️⚠ 这是自己实现的一个tree显示文件目录结构的shell ⚠️⚠️⚠️
+# 使用方式：sh /Users/admin/Desktop/web项目/1-NPM/sh/tree.sh /Users/admin/Desktop/web项目/1-NPM/sh
 
 file=/dir1/dir2/dir3/my.file.txt
 # #是去掉左边（键盘上#在 $ 的左边）(从最左边开始)
